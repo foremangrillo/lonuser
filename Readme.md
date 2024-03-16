@@ -35,6 +35,7 @@ $lonuser init
 
 ## To search ova
 This command search ovas in the server.
+
 $lonuser -t centos
 
 ## To download
@@ -44,9 +45,11 @@ the root of the server, that is, in another directory
 $lonuser -d centos_exemple.ova
 
 ## to create
+
 $lonuser -c
 
 ## to start vm
+
 $lonuser start
 
 you can Modify the file teste.sh
