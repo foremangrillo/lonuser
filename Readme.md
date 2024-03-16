@@ -13,6 +13,8 @@ where are the ovas.
 This project is missing the ssh command to start the virtual machine. The next version will have.
 
 
+The future is to create a website, it will perhaps be done with bootstrap, nothing too advanced, simpler.
+
 #apt install apache2
 
 # a2ensite teste.conf
