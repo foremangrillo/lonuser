@@ -1,4 +1,4 @@
-# lolunser
+# lonuser
 
 This software, like others that manage and simplify devops work, aims to facilitate the use of virtualbox virtual machines, 
 its development was inspired by vangrant, it is done in shellscript, an example of the server conf will be passed where 
