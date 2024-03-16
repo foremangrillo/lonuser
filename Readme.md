@@ -6,7 +6,12 @@ the eggs that are downloaded.
 
 ##syntax:
 It is necessary to create the server where the eggs will be located, the operation is as if it were a .deb repository
-If it is .deb install apache and place it in a folder such as /var/www/teste
+If it is .deb install apache and place it in a folder such as /var/www/teste.  She search in the file list.txt, this 
+file have list de ovas, you have that create archive with list the ovas. you can to create with command ls -b directory 
+where are the ovas.
+
+This project is missing the ssh command to start the virtual machine. The next version will have.
+
 
 #apt install apache2
 
@@ -20,21 +25,29 @@ DocumentRoot /var/www/teste
 
 
 </VirtualHost>
+#############################################################################################################
+
 
 ## To init
+This command create file teste.sh, this command question about name that will are create no virtualbox.
+
 $lonuser init
 
 ## To search ova
+This command search ovas in the server.
 $lonuser -t centos
 
 ## To download
+This command do download de archives the ovas. This command is necessary to place a directory, if ova is not in 
+the root of the server, that is, in another directory
+
 $lonuser -d centos_exemple.ova
 
 ## to create
 $lonuser -c
 
 ## to start vm
-$linuser start
+$lonuser start
 
 you can Modify the file teste.sh
 
