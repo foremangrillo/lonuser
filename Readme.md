@@ -25,7 +25,9 @@ ServerName teste.local
 
 DocumentRoot /var/www/teste
 
- </VirtualHost>
+</VirtualHost>
+
+##########################################################################################################
 
 $a2ensite teste.conf
 
