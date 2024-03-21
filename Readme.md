@@ -17,7 +17,7 @@ The future is to create a website, it will perhaps be done with bootstrap, nothi
 
 #apt install apache2
 
-# a2ensite teste.conf
+# to create teste.conf
 
 <VirtualHost *:80>
 
@@ -27,6 +27,7 @@ DocumentRoot /var/www/teste
 
  </VirtualHost>
 
+$a2ensite teste.conf
 
 ## To init
 This command create file teste.sh, this command question about name that will are create no virtualbox.
