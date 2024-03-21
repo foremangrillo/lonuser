@@ -24,7 +24,6 @@ The future is to create a website, it will perhaps be done with bootstrap, nothi
 ServerName teste.local
 
 DocumentRoot /var/www/teste
-
 </VirtualHost>
 
 #######################################################################################
