@@ -25,8 +25,8 @@ ServerName teste.local
 
 DocumentRoot /var/www/teste
 
-
 </VirtualHost>
+
 #######################################################################################
 
 
