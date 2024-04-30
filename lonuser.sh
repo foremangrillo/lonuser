@@ -1,6 +1,7 @@
 #!/bin/bash
-x=$(touch $HOME/.config)
-a=$(pwd | grep home | cut -d / -f 2)
+
+
+#Criador foreman.grillo
 
 
 
@@ -10,9 +11,9 @@ echo $cpus
 
 verificar_ova=$(ls -b *.ova)
 echo $verificar_ova
-VBoxManage import ./$verificar_ova --vsys 0 --vmname $name --memory $memory --cpus $cpus --eula=accept
-#VBoxManage createvm --name 7Test --ostype Oracle_64 --register 
-#VBoxManage modifyvm 7Test --cpus $cpus --memory $memory --vram $vram
+VBoxManage import ./$verificar_ova --vsys 0 --vmname $name --memory $memory --cpus $cpus  --eula=accept
+VBoxManage modifyvm $name --nat-pf1 "guestssh,tcp,127.0.1.1,$port,,22"
+ 
 }
 init(){
 
@@ -20,13 +21,15 @@ if [ ! -e  teste.sh ];
 then
 echo "entre com o nome do virtualbox"
 read nometeclar
+echo "entre com o numero de porta para o ssh"
+read port_ssh
 echo "
 
-cpus='1'
-memory="4000"
+cpus="1"
+memory="2001"
 vram="12"
 name=$nometeclar
-download="list/list/Ubuntu_for_Horizon7.ova"
+port=$port_ssh
 " >> teste.sh
 else
 echo "existe o arquivo de config"
@@ -44,10 +47,17 @@ source ./teste.sh
 vboxmanage controlvm "$name" poweroff 
 }
 
+ssp(){
+source ./teste.sh
+sshpass -p teste ssh teste@192.168.1.70 -p $port
+}
+
+
 case $1 in
 init) init;;
 start)start;;
 stop)stop;;
+ssp)ssp;;
 esac
 
 
